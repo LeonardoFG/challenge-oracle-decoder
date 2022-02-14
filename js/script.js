@@ -16,10 +16,10 @@ function criptografar(){
     event.preventDefault(); //para não carregar a pagina de no após clicar e limpar os campos
     //entrada = document.querySelector('#input-texto').value;
     entradaCodificada = entrada.value.replace(/[e\é\ê]/gi, 'enter')
-    .replace(/[i\í\î]/gi, 'imes').
-    replace(/[a\á\â\ã\á]/gi, 'ai').
-    replace(/[o\ó\õ\ô\ó]/gi, 'ober').
-    replace(/[u\ú\ú]/gi, 'ufat');
+        .replace(/[i\í\î]/gi, 'imes')
+            .replace(/[a\á\â\ã\á]/gi, 'ai')
+                .replace(/[o\ó\õ\ô\ó]/gi, 'ober')
+                    .replace(/[u\ú\ú]/gi, 'ufat');
     console.log(entradaCodificada);
     
     textoResultado.value = entradaCodificada;
@@ -42,14 +42,14 @@ function descriptografar(){
     event.preventDefault();
     var verificar = palavrasChave.some(elementoArray => entrada.value.includes(elementoArray));
     if (verificar) {
-        saidaDescriptografada = entrada.value.replace('enter', 'e')
-            .replace('imes', 'i' )
-                .replace('ai', 'a')
-                    .replace('ober', 'o')
-                        .replace('ufat', 'u'); 
+        saidaDescriptografada = entrada.value.replaceAll('enter', 'e')
+            .replaceAll('imes', 'i' )
+                .replaceAll('ai', 'a')
+                    .replaceAll('ober', 'o')
+                        .replaceAll('ufat', 'u'); 
         console.log(saidaDescriptografada);
         textoResultado.value = saidaDescriptografada;
-        
+
         } else {
         alert('A mensagem não está criptografada');
     }
@@ -77,4 +77,14 @@ function copiaTexto(){
     var campoEntrada = document.querySelector('#input-texto');
     campoEntrada.focus();
     console.log('copiaTexto');
+}
+
+
+function Dcripto(value){
+    return value.replaceAll('enter', 'e')
+        .replaceAll('imes', 'i' )
+            .replaceAll('ai', 'a')
+                .replaceAll('ober', 'o')
+                    .replaceAll('ufat', 'u'); 
+    
 }
