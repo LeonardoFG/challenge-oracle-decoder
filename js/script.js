@@ -34,3 +34,12 @@ textoResultado.value = entradaCodificada;
 Apenas letras minúsculas
 Não permite acentuação     
 */
+
+var palavrasChave = ['enter', 'imes', 'ai', 'ober', 'ufat']
+var verificar = palavrasChave.some(elementoArray => entradaCodificada.includes(elementoArray));
+
+if (verificar) {
+    descriptografar();
+} else {
+	alert('A mensagem não está criptografada');
+}
