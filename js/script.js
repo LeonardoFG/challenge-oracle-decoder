@@ -17,7 +17,7 @@ var entrada = '';
 
 function criptografar(){
     event.preventDefault(); //para não carregar a pagina de no após clicar e limpar os campos
-    entrada = document.querySelector('.text-input').value;
+    entrada = document.querySelector('#input-texto').value;
     entradaCodificada = entrada.replace(/[e\é\ê]/gi, 'enter')
     .replace(/[i\í\î]/gi, 'imes').
     replace(/[a\á\â\ã\á]/gi, 'ai').
@@ -25,14 +25,11 @@ function criptografar(){
     replace(/[u\ú\ú]/gi, 'ufat');
     console.log(entradaCodificada);
 
-    textoResultado = document.querySelector('#input-texto');
+    textoResultado = document.querySelector('#msg');
 
     textoResultado.value = entradaCodificada;
 
-    //msg.textContent = textoResultado.value;
-    msg.value = textoResultado.value;
 }
-
 
 
 /* Regras Decodificador: 
