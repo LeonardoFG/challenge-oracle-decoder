@@ -14,8 +14,8 @@ var textoResultado = document.querySelector('#msg');
 
 function criptografar(){
     event.preventDefault(); //para não carregar a pagina de no após clicar e limpar os campos
-    //entrada = document.querySelector('#input-texto').value;
-    entradaCodificada = entrada.value.replace(/[e\é\ê]/gi, 'enter')
+    let result = entrada.value.toLowerCase(); //converte para minusculo 
+    entradaCodificada = result.replace(/[e\é\ê]/gi, 'enter')
         .replace(/[i\í\î]/gi, 'imes')
             .replace(/[a\á\â\ã\á]/gi, 'ai')
                 .replace(/[o\ó\õ\ô\ó]/gi, 'ober')
