@@ -8,14 +8,17 @@
 Apenas letras minúsculas
 Não permite acentuação   
 */
-var entradaCodificada = '';
+var entradaCodificada = '1entradaCodificada';
 var saidaDescriptografada = '';
 var textoResultado = '';
-var entrada = document.querySelector('.text-input').value;
+var entrada = '';
 entrada.value;
 //var entrada = 'aeiou';
 
+console.log(entradaCodificada);
+
 function criptografar(){
+    entrada = document.querySelector('.text-input').value;
     entradaCodificada = entrada.replace(/[e\é\ê]/gi, 'enter')
     .replace(/[i\í\î]/gi, 'imes').
     replace(/[a\á\â\ã\á]/gi, 'ai').
