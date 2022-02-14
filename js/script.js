@@ -8,16 +8,15 @@
 Apenas letras minúsculas
 Não permite acentuação   
 */
-var entradaCodificada = '1entradaCodificada';
+var entradaCodificada = '';
 var saidaDescriptografada = '';
 var textoResultado = '';
 var entrada = '';
-entrada.value;
+//entrada.value;
 //var entrada = 'aeiou';
 
-console.log(entradaCodificada);
-
 function criptografar(){
+    event.preventDefault(); //para não carregar a pagina de no após clicar e limpar os campos
     entrada = document.querySelector('.text-input').value;
     entradaCodificada = entrada.replace(/[e\é\ê]/gi, 'enter')
     .replace(/[i\í\î]/gi, 'imes').
@@ -26,9 +25,12 @@ function criptografar(){
     replace(/[u\ú\ú]/gi, 'ufat');
     console.log(entradaCodificada);
 
-    var textoResultado = document.querySelector('.text-input');
+    textoResultado = document.querySelector('#input-texto');
 
     textoResultado.value = entradaCodificada;
+
+    //msg.textContent = textoResultado.value;
+    msg.value = textoResultado.value;
 }
 
 
@@ -45,8 +47,8 @@ Não permite acentuação
 
 var palavrasChave = ['enter', 'imes', 'ai', 'ober', 'ufat']
 
-
 function descriptografar(){
+    event.preventDefault();
     var verificar = palavrasChave.some(elementoArray => entradaCodificada.includes(elementoArray));
     if (verificar) {
         saidaDescriptografada = textoResultado.replace('enter', 'e')
@@ -55,30 +57,20 @@ function descriptografar(){
         replace('ober', 'o').
         replace('ufat', 'u'); 
         console.log(saidaDescriptografada);
-        console.log(saidaDescriptografada);
-    } else {
+        } else {
         alert('A mensagem não está criptografada');
     }
 
 }
 
 var ElementoBotaoC = document.querySelector('#btn-cripto');
-
 ElementoBotaoC.addEventListener('click', criptografar);
 
 var ElementoBotaoD = document.querySelector('#btn-descripto');
-
 ElementoBotaoD.addEventListener('click', descriptografar);
 
 var ElementoBotaoCopy = document.querySelector('#btn-copy');
-
 ElementoBotaoCopy.addEventListener('click', copiaTexto);
-
-inputtexto.addEventListener('click', function copiaTexto() {
-	// linhas de código...
-})
-
-
 
 
 function copiaTexto(){
@@ -89,4 +81,7 @@ function copiaTexto(){
     // Podemos ainda limpar a caixa de texto, atribuindo o valor '' ao elemento: 
 
     texto.value = '';
+    var campoEntrada = document.querySelector('#input-texto');
+    campoEntrada.focus();
+    console.log('copiaTexto');
 }
