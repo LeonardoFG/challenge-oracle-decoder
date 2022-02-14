@@ -13,16 +13,19 @@ Não permite acentuação
 //entrada.value;
 var entrada = 'aeiou';
 
-var entradaCodificada = entrada.replace(/[e\é\ê]/gi, 'enter')
-.replace(/[i\í\î]/gi, 'imes').
-replace(/[a\á\â\ã\á]/gi, 'ai').
-replace(/[o\ó\õ\ô\ó]/gi, 'ober').
-replace(/[u\ú\ú]/gi, 'ufat');
-console.log(entradaCodificada);
+function criptografar(){
+    var entradaCodificada = entrada.replace(/[e\é\ê]/gi, 'enter')
+    .replace(/[i\í\î]/gi, 'imes').
+    replace(/[a\á\â\ã\á]/gi, 'ai').
+    replace(/[o\ó\õ\ô\ó]/gi, 'ober').
+    replace(/[u\ú\ú]/gi, 'ufat');
+    console.log(entradaCodificada);
 
-var textoResultado = document.querySelector('.text-input');
+    var textoResultado = document.querySelector('.text-input');
 
-textoResultado.value = entradaCodificada;
+    textoResultado.value = entradaCodificada;
+}
+
 
 
 /* Regras Decodificador: 
@@ -40,6 +43,44 @@ var verificar = palavrasChave.some(elementoArray => entradaCodificada.includes(e
 
 if (verificar) {
     descriptografar();
+    console.log(saidaDescriptografada);
 } else {
 	alert('A mensagem não está criptografada');
+}
+
+function descriptografar(){
+    var saidaDescriptografada = textoResultado.replace('enter', 'e')
+    .replace('imes', 'i' ).
+    replace('ai', 'a').
+    replace('ober', 'o').
+    replace('ufat', 'u'); 
+    console.log(saidaDescriptografada);
+}
+
+var ElementoBotaoC = document.querySelector('#btn-cripto');
+
+ElementoBotaoC.addEventListener('click', criptografar());
+
+var ElementoBotaoD = document.querySelector('#btn-descripto');
+
+ElementoBotaoD.addEventListener('click', descriptografar());
+
+input-texto.addEventListener('click', function () {
+	// linhas de código...
+})
+
+// ou
+
+input-texto.textContent = 'blablabla'
+input-texto.value = 'taltaltal'
+
+
+function copiaTexto(){
+    var texto = document.querySelector('.texto-class')
+
+    navigator.clipboard.writeText(texto.value)
+
+    // Podemos ainda limpar a caixa de texto, atribuindo o valor '' ao elemento: 
+
+    texto.value = ''
 }
