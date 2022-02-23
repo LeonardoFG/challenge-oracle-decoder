@@ -83,6 +83,12 @@ margin: 16px 0px;
   margin: 0px 8px;
 }
 
+.btn {
+    /*position: static;*/
+    width: 328px;
+    height: 67px;
+}
+
 #btn-cripto {
   /* Button */
 
@@ -94,11 +100,7 @@ margin: 16px 0px;
   justify-content: center;
   padding: 24px;
 
-  /*position: static;*/
-  width: 328px;
-  height: 67px;
-  left: 0px;
-  top: 0px;
+
 
   /* Dark blue/dark-blue-300 */
 
@@ -109,7 +111,6 @@ margin: 16px 0px;
 
   flex: none;
   order: 0;
-  flex-grow: 1;
   margin: 0px 8px;
 
   /* font */
@@ -127,11 +128,6 @@ margin: 16px 0px;
 }
 
 #btn-descripto {
-  width: 280px;
-  height: 19px;
-  left: 24px;
-  top: 24px;
-  
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -158,11 +154,6 @@ margin: 16px 0px;
   align-items: center;
   justify-content: center;
   padding: 24px;
-
-  width: 328px;
-  height: 67px;
-  left: 352px;
-  top: 0px;
 
   /* Light gray */
 
@@ -182,11 +173,6 @@ margin: 16px 0px;
 }
 
 #btn-copy{
-  width: 280px;
-  height: 19px;
-  left: 24px;
-  top: 24px;
-  
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -214,11 +200,6 @@ margin: 16px 0px;
   justify-content: center;
   padding: 24px;
 
-  width: 328px;
-  height: 67px;
-  left: 352px;
-  top: 0px;
-
   /* Light gray */
 
   background: #D8DFE8;
@@ -234,4 +215,22 @@ margin: 16px 0px;
   order: 1;
   flex-grow: 0;
 
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 686px;
+}
+
+@media screen and (max-width:600px) {
+  .botoes {
+    flex-direction: column;
+
+  
+  }
+  .btn {
+    margin-bottom: 0.8rem !important;
+  }
 }
