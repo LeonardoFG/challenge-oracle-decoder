@@ -37,12 +37,12 @@ flex-grow: 0;
 margin: 16px 0px;
 }
 
-#input-texto {
-  /*position: absolute;
+.text-input {
+  /*position: absolute;*/
   width: 680px;
-  height: 288px;
+  height: 150px;
   left: 240px;
-  top: 168px;*/
+  top: 168px;
   
   font-family: Inter;
   font-style: normal;
@@ -90,7 +90,8 @@ margin: 16px 0px;
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 24px;
 
   /*position: static;*/
@@ -154,7 +155,8 @@ margin: 16px 0px;
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 24px;
 
   width: 328px;
@@ -208,7 +210,8 @@ margin: 16px 0px;
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 24px;
 
   width: 328px;
