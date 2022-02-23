@@ -80,7 +80,6 @@ margin: 16px 0px;
 #btn-cripto {
   /* Button */
 
-
   /* Auto layout */
 
   display: flex;
@@ -103,21 +102,55 @@ margin: 16px 0px;
 
   flex: none;
   order: 0;
-  flex-grow: 0;
-  margin: 0px 24px;
+  flex-grow: 1;
+  margin: 0px 8px;
+
+  /* font */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
 
   /* White */
 
   color: #FFFFFF;
+
 }
 
 #btn-descripto {
+  width: 280px;
+  height: 19px;
+  left: 24px;
+  top: 24px;
+  
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  
+  /* Dark blue/dark-blue-300 */
+  
+  color: #0A3871;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 0px 8px;
+
+  /* Auto layout */
+
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 24px;
 
-  /*position: static;
   width: 328px;
   height: 67px;
   left: 352px;
@@ -137,51 +170,59 @@ margin: 16px 0px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 0px 24px;
+
 }
 
 #btn-copy{
-  /* Button */
-
-   /*position: static;
-  width: 288px;
+  width: 280px;
   height: 19px;
   left: 24px;
-  top: 24px;*/
-
-  font-family: Arial;
+  top: 24px;
+  
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-
+  
   /* Dark blue/dark-blue-300 */
-
+  
   color: #0A3871;
-
-
+  
+  
   /* Inside auto layout */
-
+  
   flex: none;
   order: 0;
   flex-grow: 1;
   margin: 0px 8px;
-}
 
-.msgbox {
-  /* Rectangle 1 */
-  /*position: absolute;
-  width: 400px;
-  height: 944px;
-  left: 1000px;
-  top: 40px;*/
+  /* Auto layout */
 
-  /* White */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
 
-  background: #FFFFFF;
-  /* shadow */
+  width: 328px;
+  height: 67px;
+  left: 352px;
+  top: 0px;
 
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-  border-radius: 32px;
+  /* Light gray */
+
+  background: #D8DFE8;
+  /* Dark blue/dark-blue-300 */
+
+  border: 1px solid #0A3871;
+  box-sizing: border-box;
+  border-radius: 24px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
 }
