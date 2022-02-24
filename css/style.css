@@ -5,12 +5,11 @@
 }
 
 .alogo {
-  
-  /*position: absolute;
+  /*position: absolute;*/
   left: 36.67%;
   right: 37.43%;
   top: 0%;
-  bottom: 0%;*/
+  bottom: 0%;
 }
 
 h2 {
@@ -233,4 +232,12 @@ margin: 16px 0px;
   .btn {
     margin-bottom: 0.8rem !important;
   }
+}
+
+
+.rodape {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
